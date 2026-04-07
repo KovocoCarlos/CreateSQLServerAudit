@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kovoco &mdash; SQL Audit Configurator</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <!-- Favicon: Blue Jay on Deep Navy rounded square -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230D2B4E'/%3E%3Cellipse cx='50' cy='58' rx='22' ry='24' fill='%23146BCD'/%3E%3Ccircle cx='58' cy='40' r='13' fill='%23146BCD'/%3E%3Cpath d='M55 28 Q59 18 65 27' fill='%230D2B4E'/%3E%3Ccircle cx='62' cy='38' r='3.5' fill='white'/%3E%3Ccircle cx='62.5' cy='37.5' r='2' fill='%230D2B4E'/%3E%3Cpath d='M70 41 L80 40 L70 44 Z' fill='white'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- Top Bar — Deep Navy #0D2B4E background -->
+    <header class="topbar">
+      <div class="topbar-logo">
+        <!-- Blue Jay icon — uses Deep Navy darks instead of retired Steel -->
+        <svg viewBox="0 0 200 200" width="36" height="36" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="tb1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#5ca8ff"/>
+              <stop offset="100%" style="stop-color:#146BCD"/>
+            </linearGradient>
+            <linearGradient id="tb2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#0D2B4E"/>
+              <stop offset="100%" style="stop-color:#164578"/>
+            </linearGradient>
+          </defs>
+          <ellipse cx="100" cy="120" rx="50" ry="55" fill="url(#tb1)"/>
+          <path d="M65 105 Q40 130 55 155 Q75 145 80 125 Z" fill="url(#tb2)"/>
+          <circle cx="115" cy="82" r="28" fill="url(#tb1)"/>
+          <path d="M110 58 Q118 35 130 55 Q122 50 115 58 Z" fill="url(#tb2)"/>
+          <path d="M115 62 Q125 40 138 52" fill="url(#tb1)"/>
+          <circle cx="124" cy="78" r="8" fill="white"/>
+          <circle cx="125" cy="77" r="4.5" fill="#0D2B4E"/>
+          <circle cx="126.5" cy="75.5" r="1.5" fill="white"/>
+          <path d="M140 84 L158 82 L140 90 Z" fill="#e2e8f0"/>
+          <path d="M60 155 Q40 175 30 185 Q50 180 65 170 Z" fill="url(#tb2)"/>
+          <ellipse cx="105" cy="145" rx="30" ry="22" fill="white" opacity="0.25"/>
+        </svg>
+        <div>
+          <div class="topbar-title">Kovoco</div>
+          <div class="topbar-subtitle">SQL Audit Configurator</div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-badge" id="topbar-badge" style="display:none"></span>
+        <span class="topbar-server" id="topbar-server"></span>
+      </div>
+    </header>
+
+    <!-- Sidebar Stepper -->
+    <nav class="sidebar">
+      <ul class="stepper" id="stepper"></ul>
+      <div class="volume-sidebar" id="volume-panel">
+        <h4>Est. Daily Volume</h4>
+        <div class="volume-bar-track">
+          <div class="volume-bar-fill" style="width:0"></div>
+        </div>
+        <div class="volume-number" style="color:var(--teal)">0</div>
+        <div class="volume-label">events/day</div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content"></main>
+
+  </div>
+
+  <!-- Blue Jay Watermark — Deep Navy colors -->
+  <div class="jay-watermark">
+    <svg viewBox="0 0 200 200" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="120" rx="50" ry="55" fill="#146BCD"/>
+      <path d="M65 105 Q40 130 55 155 Q75 145 80 125 Z" fill="#0D2B4E"/>
+      <circle cx="115" cy="82" r="28" fill="#146BCD"/>
+      <path d="M110 58 Q118 35 130 55 Q122 50 115 58 Z" fill="#0D2B4E"/>
+      <path d="M115 62 Q125 40 138 52" fill="#146BCD"/>
+      <path d="M60 155 Q40 175 30 185 Q50 180 65 170 Z" fill="#0D2B4E"/>
+    </svg>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toasts"></div>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
